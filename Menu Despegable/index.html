@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu despegable responsive</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/icon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <nav>
+        <div class="mobile">
+            <div class="header">
+                <div class="logo"><span><img src="./assets/icon.ico" alt=""></span></div>
+                <div class="more">
+                    <button id="bMore"><span class="material-icons">
+                    menu
+                    </span>
+                </button>
+                </div>
+            </div>
+            <div id="links">
+                <a href="#">Services</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Search</a>
+                <a href="#">Sign up</a>
+                <a href="#">Login</a>
+            </div>
+        </div>
+
+        <div class="desktop">
+            <div class="logo"><span><img src="./assets/icon.ico" alt=""></span></div>
+
+            <div class="primary">
+                <a href="#">Services</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="secondary full">
+                <a href="#">Search</a>
+                <a href="#">Sign up</a>
+                <a href="#">Login</a>
+            </div>
+            <div class="secondary mini">
+                <a href="#" class="more">More</a>
+                <div class="submenu">
+                    <a href="#">Search</a>
+                    <a href="#">Sign up</a>
+                    <a href="#">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        const bMore = document.querySelector('#bMore');
+        const links = document.querySelector('#links')
+
+        bMore.addEventListener('click', (e) => {
+            links.classList.toggle('collapsed');
+        });
+    </script>
+</body>
+</html>
